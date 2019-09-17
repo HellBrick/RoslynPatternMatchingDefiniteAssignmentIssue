@@ -26,6 +26,12 @@
 			return flag ? notNull.ToString() : "";
 		}
 
+		private static string ExternalEmptyStructFieldCallSite( Lib.EmptyStruct? nullable )
+		{
+			bool flag = nullable is Lib.EmptyStruct notNull;
+			return flag ? notNull.ToString() : "";
+		}
+
 		private static string InternalStringPropCallSite(App.StructWithStringProp? nullable)
 		{
 			bool flag = nullable is App.StructWithStringProp notNull;
@@ -47,6 +53,12 @@
 		private static string InternalStringFieldCallSite(App.StructWithStringField? nullable)
 		{
 			bool flag = nullable is App.StructWithStringField notNull;
+			return flag ? notNull.ToString() : "";
+		}
+
+		private static string InternalEmptyStructFieldCallSite( App.EmptyStruct? nullable )
+		{
+			bool flag = nullable is App.EmptyStruct notNull;
 			return flag ? notNull.ToString() : "";
 		}
 	}

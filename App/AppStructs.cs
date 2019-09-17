@@ -19,4 +19,8 @@
 	{
 		public string Text { get; set; }
 	}
+
+	public struct EmptyStruct
+	{
+	}
 }
